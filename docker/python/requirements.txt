@@ -1,0 +1,8 @@
+Django==2.2.10
+channels==2.4.0
+djangorestframework==3.10.0
+markdown
+channels_redis
+daphne
+django-cors-headers
+mysqlclient

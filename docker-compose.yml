@@ -1,0 +1,40 @@
+version: '3'
+services:
+  basicpython:
+    container_name: basicpython
+    build: ./docker/python
+    ports:
+      - 8000:8000
+    volumes:
+      - ./backend:/var/www/html
+    working_dir: /var/www/html
+    depends_on:
+      - basicmysql
+      - redis
+    command: /usr/local/bin/python /var/www/html/manage.py runserver 0.0.0.0:8000
+
+  basicmysql:
+    build: docker/mysql
+    container_name: basicmysql
+    ports:
+      - 8306:3306
+    volumes:
+      - data-volume:/var/lib/mysql
+      - ./mysqldata:/root
+    environment:
+      - MYSQL_ROOT_PASSWORD=password
+      - MYSQL_DATABASE=django
+    healthcheck:
+      test: "exit 0"
+  
+  redis:
+    container_name: redis
+    image: redis:2.8
+    ports:
+      - "6379:6379"
+    volumes:
+      - ../data/redis:/data
+ 
+
+volumes:
+  data-volume:
