@@ -19,6 +19,7 @@ Has a Frontend Application developed in React Js which can display to the enduse
 - Node.js 
 
 >>To run application \
+- $docker pull redis
 - $python3 -m pip install -r ./docker/python/requirements.txt
 - $python3 manage.py runserver
 - go to http://localhost:8000
