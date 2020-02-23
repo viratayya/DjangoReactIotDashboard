@@ -19,6 +19,12 @@ Has a Frontend Application developed in React Js which can display to the enduse
 - Node.js 
 
 >>To run application \
+- $python3 -m pip install -r ./docker/python/requirements.txt
+- $python3 manage.py runserver
+- go to http://localhost:8000
+ 
+ or through Docker run commands  
+- change database settings by uncommenting mysql settings
 - $docker-compose up --build
 - go to http://localhost:8000
 
