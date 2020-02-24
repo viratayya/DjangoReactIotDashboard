@@ -27,7 +27,7 @@ Has a Frontend Application developed in React Js which can display to the enduse
  or through Docker run commands  
 - change database settings by uncommenting mysql settings
 - $docker-compose up --build
-- $docker exec -it <basicpython id> python manage.py loaddata data.json
+- $docker exec -it #basicpythonid python manage.py loaddata data.json
 - go to http://localhost:8000
 
 >>Docker Container details (Development SetUp)
