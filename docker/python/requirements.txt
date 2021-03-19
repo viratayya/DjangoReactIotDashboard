@@ -1,6 +1,6 @@
 Django==2.2.10
 channels==2.4.0
-djangorestframework==3.10.0
+djangorestframework==3.11.2
 markdown
 channels_redis
 daphne
